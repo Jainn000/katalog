@@ -57,7 +57,7 @@ async function loadProducts() {
 
     produkContainer.innerHTML = render;
   } catch (error) {
-    produkContainer.innerHTML = `<p style="color: white;">Gagal memuat produk.</p>`;
+    produkContainer.innerHTML = `<p>Gagal memuat produk.</p>`;
   }
 }
 
@@ -75,7 +75,7 @@ async function loadCategories() {
 
     kategoriContainer.innerHTML = render;
   } catch (error) {
-    kategoriContainer.innerHTML = `<p style="color: white;">Gagal memuat kategori.</p>`;
+    kategoriContainer.innerHTML = `<p>Gagal memuat kategori.</p>`;
   }
 }
 
