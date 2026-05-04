@@ -3,6 +3,7 @@ const produkContainer = document.getElementById("produk");
 const kategoriContainer = document.getElementById("kategori");
 const hamburger = document.getElementById("hamburger");
 const listNav = document.getElementById("list-nav");
+const search = document.getElementById("search")
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -78,6 +79,24 @@ async function loadCategories() {
     kategoriContainer.innerHTML = `<p>Gagal memuat kategori.</p>`;
   }
 }
+
+async function searching() {
+  const searchValue = search.trim()
+  if (searchValue === " ") {
+    return
+  }
+  const response = await fetch(api)
+  const data = await response.json()
+
+  
+}
+
+search.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    console.log(search.value)
+  }
+})
+
 
 loadCategories();
 loadProducts();
